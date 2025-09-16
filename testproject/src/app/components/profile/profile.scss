@@ -1,0 +1,28 @@
+.page { display: flex; min-height: 100vh; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue"; }
+
+app-sidebar { flex: 0 0 220px; }
+
+/* content area */
+.content { flex: 1; padding: 24px; background: #fafafa; }
+
+/* header */
+.profile-header { display: flex; gap: 18px; align-items: center; background: #fff; padding: 18px; border-radius: 6px; box-shadow: 0 1px 0 rgba(0,0,0,0.04); margin-bottom: 18px; }
+.avatar { width: 72px; height:72px; border-radius: 50%; background: #e8f5e9; display:flex; align-items:center; justify-content:center; }
+.avatar-icon { font-size: 28px; }
+.header-info .name-row { display:flex; align-items:center; gap:12px; }
+.role-pill { background:#e6f4ff; color:#0b66ff; padding:4px 8px; border-radius:999px; font-size:12px; }
+.edit-btn { margin-left:auto; background:#6b7cff; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+
+/* stats */
+.stats-row { margin: 16px 0; }
+.cards-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap:12px; }
+
+/* tabs */
+.tabs { display:flex; gap:12px; margin-bottom: 14px; }
+.tab { background: transparent; border:none; padding:8px 12px; cursor:pointer; }
+.tab.active { border-bottom: 2px solid #1976d2; color:#1976d2; }
+
+/* tab body */
+.tab-body { background:#fff; padding:18px; border-radius:6px; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+
+/* layout for profile-info section will be handled in profile-info.scss */

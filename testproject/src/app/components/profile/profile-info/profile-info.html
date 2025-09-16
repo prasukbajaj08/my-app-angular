@@ -1,0 +1,45 @@
+<div class="profile-info-grid">
+  <div class="left">
+    <div class="small-card">
+      <div class="initials">{{ user.firstname.charAt(0).toUpperCase() }}{{ user.lastname.charAt(0).toUpperCase() }}</div>
+      <div class="name">{{ user.firstname }} {{ user.lastname }}</div>
+      <div class="subtext">Coach</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="form-row">
+      <label>First Name</label>
+      <input readonly [value]="user.firstname" />
+    </div>
+
+    <div class="form-row">
+      <label>Last Name</label>
+      <input readonly [value]="user.lastname" />
+    </div>
+
+    <div class="form-row">
+      <label>Email</label>
+      <input readonly [value]="user.email" />
+    </div>
+
+    <div class="form-row">
+      <label>Phone</label>
+      <input readonly [value]="user.phoneNumber" />
+    </div>
+
+    <div class="form-row">
+      <label>Location</label>
+      <input readonly [value]="user.location" />
+    </div>
+
+    <div class="form-row bio">
+      <label>Bio</label>
+      <textarea readonly rows="5">{{ user.bio }}</textarea>
+    </div>
+
+    <div class="actions">
+      <button class="edit" (click)="void 0">Edit Profile</button> <!-- no-op for now -->
+    </div>
+  </div>
+</div>

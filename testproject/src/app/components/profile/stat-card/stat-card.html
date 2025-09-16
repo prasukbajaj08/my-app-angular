@@ -1,0 +1,11 @@
+<div class="stat-card" role="group" aria-label="{{ model.label }}">
+  <div class="stat-content">
+
+    <div class="value">{{ model.value }}</div>
+    <div class="label">{{ model.label }}</div>
+
+    @if (model.small) {
+      <div class="small">{{ model.small }}</div>
+    }
+  </div>
+</div>

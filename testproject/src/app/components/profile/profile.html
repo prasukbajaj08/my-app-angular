@@ -1,0 +1,53 @@
+<div class="page">
+  <app-sidebar></app-sidebar>
+
+  <div class="content">
+    <!-- Profile header -->
+    <section class="profile-header">
+      <div class="avatar"> <!-- simple avatar placeholder --> 
+        <span class="avatar-icon">👤</span>
+      </div>
+
+      <div class="header-info">
+        <div class="name-row">
+          <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+          <span class="role-pill">Coach</span> <!-- hardcoded label -->
+          <button class="edit-btn">Edit Profile</button>
+        </div>
+
+        <div class="sub">
+          <div class="coaching-name">Senior Leadership Coach — MentorMingle Coaching</div>
+          <div class="meta">
+            <span>8 years experience</span>
+            <span> • </span>
+            <span>★ 4.8 (42 reviews)</span>
+            <span> • </span>
+            <span>{{ user.email }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats cards row -->
+    <section class="stats-row">
+      @if (isCoach()) {
+        <coach-stat-cards></coach-stat-cards>
+      } @else {
+        <coachee-stat-cards></coachee-stat-cards>
+      }
+    </section>
+
+    <!-- Tabbed content: Profile Information / Coaching Details / Availability -->
+    <section class="tabs-area">
+      <nav class="tabs">
+        <button class="tab active">Profile Information</button>
+        <button class="tab">Coaching Details</button>
+        <button class="tab">Availability</button>
+      </nav>
+
+      <div class="tab-body">
+        <profile-info [user]="user"></profile-info>
+      </div>
+    </section>
+  </div>
+</div>

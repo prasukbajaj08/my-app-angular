@@ -1,0 +1,6 @@
+.sidebar { width:220px; padding:18px; background:#fff; height:100vh; box-shadow: 1px 0 0 rgba(0,0,0,0.04); position:sticky; top:0; }
+.brand { font-weight:700; margin-bottom:18px; }
+.nav { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.nav a { color:#333; text-decoration:none; padding:8px; display:block; border-radius:6px; }
+.nav .active a, .nav a:hover { background:#e9f5ff; color:#0b66ff; }
+.logout { margin-top: 16px; background:transparent; border:1px solid #eee; padding:8px; border-radius:6px; cursor:pointer; width:100%; }

@@ -1,0 +1,39 @@
+.stat-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  text-align: center;
+  display: inline-block;
+  width: 180px;          /* default width */
+  height: 110px;         /* default height */
+  box-shadow: 0 6px 12px rgba(18, 24, 40, 0.06); /* subtle shadow */
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/* Slight lift on hover for a bit of depth without heavy effects */
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(18, 24, 40, 0.08);
+}
+
+.stat-card .value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.stat-card .label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.stat-card .small {
+  font-size: 0.82rem;
+  color: #666;
+}
