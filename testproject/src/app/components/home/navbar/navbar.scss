@@ -1,0 +1,87 @@
+:host {
+  display: block; /* ensure host paints */
+}
+
+/* navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  min-height: 64px;
+
+  /* white background as requested */
+  background: #ffffff;
+
+  /* dark text for good contrast */
+  --nav-text: #0f1724; /* near-black for readability */
+  color: var(--nav-text);
+
+  position: relative;
+  z-index: 10;
+
+  /* subtle separation from page */
+  border-bottom: 1px solid rgba(15, 23, 36, 0.06);
+  box-shadow: 0 2px 6px rgba(15, 23, 36, 0.03);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* branding */
+.brand {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--nav-text);
+}
+
+/* links area */
+.links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* normal links */
+.link {
+  cursor: pointer;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+/* hover/focus for links */
+.link:hover,
+.link:focus {
+  background: rgba(15, 23, 36, 0.04);
+  outline: none;
+}
+
+/* CTA button — prominent */
+.cta {
+  background: var(--primary, #1f77d9); /* use your primary with fallback */
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 14px rgba(31,119,217,0.12);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+/* CTA hover/focus */
+.cta:hover,
+.cta:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(31,119,217,0.14);
+}
+
+/* small-screen spacing safety */
+@media (max-width: 640px) {
+  .nav { padding: 10px 16px; }
+  .brand { font-size: 18px; }
+  .links { gap: 8px; }
+  .cta { padding: 7px 10px; font-size: 14px; }
+}
