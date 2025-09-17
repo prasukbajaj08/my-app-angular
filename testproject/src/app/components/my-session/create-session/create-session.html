@@ -1,0 +1,60 @@
+<div class="overlay" (click)="onCancel()" aria-hidden="true"></div>
+
+<div class="panel" role="dialog" aria-modal="true" aria-label="Create New Session">
+  <header class="panel-header">
+    <h3>Create New Session</h3>
+  </header>
+
+  <form class="panel-body" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label>Session Title</label>
+      <input type="text" placeholder="e.g., Leadership Development Session" formControlName="title" />
+    </div>
+
+    <div class="field">
+      <label>Description</label>
+      <textarea rows="4" placeholder="Describe what this session will cover..." formControlName="description"></textarea>
+    </div>
+
+    <div class="row-2">
+      <div class="field">
+        <label>Topic</label>
+        <select formControlName="topic">
+          @for (t of topics; track t) {
+            <option [value]="t">{{ t }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Duration (minutes)</label>
+        <input type="number" min="15" max="300" step="5" formControlName="durationMin" />
+      </div>
+    </div>
+
+    <div class="row-2">
+      <div class="field">
+        <label>Date</label>
+        <input type="date" formControlName="date" />
+      </div>
+
+      <div class="field">
+        <label>Time</label>
+        <input type="time" formControlName="time" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Format</label>
+      <div class="seg">
+        <label><input type="radio" value="online" formControlName="format" /> online</label>
+        <label><input type="radio" value="offline" formControlName="format" /> offline</label>
+      </div>
+    </div>
+
+    <footer class="panel-footer">
+      <button type="button" class="btn ghost" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="btn primary" [disabled]="!isValid()">Create Session</button>
+    </footer>
+  </form>
+</div>

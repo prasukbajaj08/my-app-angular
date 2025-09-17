@@ -1,0 +1,13 @@
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.empty {
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+  border: 1px dashed #e2e8f0;
+  color: #6b7280;
+}

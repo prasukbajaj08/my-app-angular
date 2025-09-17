@@ -1,0 +1,11 @@
+@if (sessions && sessions.length > 0) {
+  @for (s of sessions; track s.id) {
+    <app-session-card
+      [session]="s"
+      (view)="onView($event)"
+      (edit)="onEdit($event)">
+    </app-session-card>
+  }
+} @else {
+  <div class="empty">No sessions found.</div>
+}

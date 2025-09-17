@@ -1,0 +1,28 @@
+.ms-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.ms-sidebar {
+  width: 230px;
+  border-right: 1px solid #e6e9ee;
+}
+
+.ms-main {
+  flex: 1;
+  padding: 24px;
+  background: #f7f8fb;
+}
+
+.ms-content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.empty {
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+  border: 1px dashed #e2e8f0;
+  color: #6b7280;
+}

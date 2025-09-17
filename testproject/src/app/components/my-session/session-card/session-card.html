@@ -1,0 +1,30 @@
+<div class="session-card">
+  <div class="left">
+    <div class="title-row">
+      <h3 class="title">{{ session.title }}</h3>
+
+      @if (session.status === 'published') {
+        <span class="badge">published</span>
+      }
+
+      @if (session.status === 'completed') {
+        <span class="badge completed">completed</span>
+      }
+    </div>
+
+    <p class="desc">{{ session.description }}</p>
+
+    <div class="meta">
+      <div class="meta-item">{{ formatDate(session.startAt) }}</div>
+      <div class="meta-item">• {{ session.durationMin }} minutes</div>
+      <div class="meta-item">• {{ session.mode }}</div>
+      <div class="meta-item">• {{ session.attendees.registered }}/{{ session.attendees.capacity || 1 }}</div>
+      <div class="meta-item coach">Coach: {{ session.coach.name }}</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <button class="view" (click)="emitView()">View Details</button>
+    <button class="edit" (click)="emitEdit()">Edit</button>
+  </div>
+</div>

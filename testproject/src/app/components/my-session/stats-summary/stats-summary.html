@@ -1,0 +1,23 @@
+@if (summary) {
+  <div class="stats-grid">
+    <div class="tile">
+      <div class="label">Total Sessions</div>
+      <div class="value">{{ summary.total }}</div>
+    </div>
+
+    <div class="tile">
+      <div class="label">Upcoming</div>
+      <div class="value">{{ summary.upcoming }}</div>
+    </div>
+
+    <div class="tile">
+      <div class="label">Completed</div>
+      <div class="value">{{ summary.completed }}</div>
+    </div>
+
+    <div class="tile">
+      <div class="label">Active Coaches</div>
+      <div class="value">{{ summary.activeCoaches }}</div>
+    </div>
+  </div>
+}
