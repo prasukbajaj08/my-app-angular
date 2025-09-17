@@ -1,0 +1,18 @@
+.stat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(16,24,40,0.03);
+  .title { font-size: 13px; color: #6b7280; }
+  .value { font-size: 20px; font-weight: 600; margin-top: 6px; }
+  .icon {
+    font-size: 22px;
+    padding: 8px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #111827;
+  }
+}

@@ -1,0 +1,34 @@
+<!-- Main dashboard layout: sidebar (reusable), main content -->
+<div class="app-shell">
+  <aside class="left">
+    <!-- existing sidebar component (reusable) -->
+    <app-sidebar></app-sidebar>
+  </aside>
+
+  <main class="main-content">
+    <!-- header -->
+    <app-header></app-header>
+
+    <!-- stats row -->
+    <section class="stats-row">
+      <app-stat-info-card title="Total Coaches" value="24" icon="p"></app-stat-info-card>
+      <app-stat-info-card title="Completed Sessions" value="156" icon="p"></app-stat-info-card>
+      <app-stat-info-card title="Upcoming Sessions" value="8" icon="p"></app-stat-info-card>
+      <app-stat-info-card title="Average Rating" value="4.8" icon="p"></app-stat-info-card>
+      <app-stat-info-card title="Total Earnings" value="$12,450" icon="p"></app-stat-info-card>
+    </section>
+
+    <section class="content-grid">
+      <div class="left-col">
+        <!-- Coachee join requests (modified from recent coachee) -->
+        <app-coachee-requests></app-coachee-requests>
+      </div>
+
+      <div class="right-col">
+        <!-- Complete profile (hardcoded) -->
+        <app-complete-profile></app-complete-profile>
+      </div>
+    </section>
+
+  </main>
+</div>

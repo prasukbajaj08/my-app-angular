@@ -1,0 +1,17 @@
+.complete-profile {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(16,24,40,0.03);
+  h3 { margin: 0 0 6px 0; }
+  p { color: #6b7280; font-size: 13px; }
+  .actions { margin-top: 12px; }
+  .btn-primary {
+    background: #0ea5e9;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}

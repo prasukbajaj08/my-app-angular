@@ -1,0 +1,42 @@
+/* Basic high-level layout used by the dashboard */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.left {
+  width: 240px;
+  border-right: 1px solid #e6e9ee;
+  background: #fafbfc;
+}
+
+.main-content {
+  flex: 1;
+  padding: 18px;
+  background: #f5f7fa;
+}
+
+/* stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 8px 0 20px 0;
+}
+
+/* grid for main content */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .left { display: none; } /* optionally hide sidebar on small screens */
+}

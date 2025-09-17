@@ -1,0 +1,36 @@
+<section class="requests-card">
+  <header>
+    <h3>Coachee Requests</h3>
+    <small class="muted">Requests to join sessions</small>
+  </header>
+
+  <div class="requests-list">
+    @for (req of coacheeRequests; track req.id) {
+      <div class="request-row">
+        <div class="info">
+          <div class="name">{{ req.coacheeName }}</div>
+          <div class="session">
+            {{ req.sessionName }} • <span class="time">{{ req.requestedAt }}</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          @if (req.status === 'pending') {
+            <button class="btn-approve" (click)="approve(req)">Approve</button>
+            <button class="btn-deny" (click)="deny(req)">Deny</button>
+          }
+
+          @if (req.status !== 'pending') {
+            <div class="status">
+              <span class="pill"
+                    [class.approved]="req.status === 'approved'"
+                    [class.denied]="req.status === 'denied'">
+                {{ req.status }}
+              </span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
