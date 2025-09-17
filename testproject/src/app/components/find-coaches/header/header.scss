@@ -1,0 +1,13 @@
+.finder-hero{
+  background: linear-gradient(180deg,#0d6efd 0%, #0a56c1 100%);
+  color: white;
+  padding: 36px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.finder-hero .hero-inner{ max-width: 900px; margin: 0 auto; text-align: center; }
+.finder-hero h1{ margin: 0 0 8px; font-size: 28px; }
+.finder-hero p{ margin: 0 0 16px; opacity: .95; }
+.search-wrap{ display:flex; gap:8px; justify-content:center; }
+.search-wrap input{ width: 60%; padding: 10px; border-radius:6px; border: none; }
+.search-wrap button{ padding: 10px 16px; border-radius:6px; border:none; background:#fff; color:#0a56c1; font-weight:600; }

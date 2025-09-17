@@ -1,0 +1,4 @@
+.page{ display:flex; gap:20px; }
+.main{ flex:1; padding: 24px; min-height: 100vh; background:#f8f9fb; }
+.results-info{ color:#666; margin: 12px 0; }
+.cards-grid{ display:flex; flex-direction:column; gap:14px; }

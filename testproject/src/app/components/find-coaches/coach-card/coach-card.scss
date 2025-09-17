@@ -1,0 +1,20 @@
+.coach-card{
+  display:flex;
+  gap:16px;
+  background:#fff;
+  border-radius:8px;
+  padding:16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  align-items:flex-start;
+}
+.coach-card .thumb img{ width:160px; height:110px; object-fit:cover; border-radius:6px; }
+.coach-card .content{ flex:1; }
+.name{ margin:0; font-size:18px; color:#0b2b4a; }
+.role{ color:#0b76ff; margin:6px 0; font-weight:600; }
+.rating{ margin-bottom:8px; color:#777; }
+.loc{ color:#6a6a6a; font-size:13px; margin-bottom:10px; }
+.bio{ margin:0 0 12px; color:#444; }
+.contact{ font-size:13px; color:#666; display:flex; gap:12px; margin-bottom:12px; }
+.footer{ display:flex; justify-content:space-between; align-items:center; }
+.view-btn{ background:#0b76ff; color:white; border:none; padding:8px 12px; border-radius:6px; }
+.price{ font-weight:700; }

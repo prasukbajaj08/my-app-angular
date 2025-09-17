@@ -1,0 +1,30 @@
+<article class="coach-card">
+  @if (profileImageUrl) {
+    <div class="thumb">
+      <img [src]="profileImageUrl" alt="{{ firstName }} {{ lastName }}" />
+    </div>
+  }
+
+  <div class="content">
+    <div class="meta">
+      <h3 class="name">{{ firstName }} {{ lastName }}</h3>
+      <div class="role">{{ specialization }}</div>
+      <div class="rating">★ {{ rating }} ({{ reviews }})</div>
+    </div>
+
+    <div class="loc">{{ location }}</div>
+
+    <p class="bio">{{ bio }}</p>
+
+    <div class="contact">
+      <div class="email">✉ {{ email }}</div>
+      <div class="phone">☎ {{ phoneNumber }}</div>
+    </div>
+
+    <div class="footer">
+      <div class="price">${{ price }}/session</div>
+      <!-- <button class="view-btn">View Profile</button> -->
+      <button class="view-btn">Book Session</button>
+    </div>
+  </div>
+</article>

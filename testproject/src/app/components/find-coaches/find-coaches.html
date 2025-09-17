@@ -1,0 +1,29 @@
+<div class="page">
+  <app-sidebar></app-sidebar>
+
+  <div class="main">
+    <app-header></app-header>
+
+    <section class="results">
+      <div class="results-info">Showing {{ coaches.length }} coaches</div>
+
+      <div class="cards-grid">
+        @for (coach of coaches; track coach.coachId) {
+          <app-coach-card
+            [firstName]="coach.firstName"
+            [lastName]="coach.lastName"
+            [email]="coach.email"
+            [phoneNumber]="coach.phoneNumber"
+            [location]="coach.location"
+            [bio]="coach.bio"
+            [profileImageUrl]="coach.profileImageUrl"
+            [price]="coach.price"
+            [rating]="coach.rating"
+            [reviews]="coach.reviews"
+            [specialization]="coach.specialization"
+          ></app-coach-card>
+        }
+      </div>
+    </section>
+  </div>
+</div>
